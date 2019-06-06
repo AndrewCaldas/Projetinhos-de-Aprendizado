@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuejs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    
+        <div id="app">
+                <br><br><br>
+
+                <div class="container">
+                   <h1>{{ title }}</h1>
+                   <button @click.stop.prevent="getUsers()" class="btn btn-sucess">GET USERS</button>
+
+                   <ul>
+                       <li v-for="user in users">{{ user.name }}</li>
+                   </ul>
+                </div>
+
+                <div v-if="response.status == 'error'" class="alert alert-danger">{{ response.msg }}</div>
+        </div>
+         
+            <script src="https://unpkg.com/vue"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+            <script>
+
+                var mixin = {
+                    methods: {
+                        getUsers(){
+                            var url = 'http://jsonplaceholder.typicode.com/user';
+                            this.$http.get(url).then(function (r) {
+                                this.users = r.body;
+                            }, function (error){
+                                this.response.status = "error";
+                                console.log(error);
+                            });
+                        }
+                    },
+                }
+        
+                
+        
+                var app = new Vue({
+                    el: "#app",
+
+                    mixins: [mixin],
+        
+                    data: {
+                        title: "Vuejs do jeito ninja",
+                        users: [],
+                        response: {
+                            msg: "Erro ao conectar",
+                            status: ""
+                        }
+                    },
+        
+                })
+            </script>         
+        </body>
+        </html>
+        

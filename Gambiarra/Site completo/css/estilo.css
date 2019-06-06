@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: "Century Ghotic";
+	font-family: 16px;
+	color: #999
+}
+
+#geral_home {
+	width: 940px;
+	height: 970px;
+	margin: auto;
+}
+.topo_home{
+	width: 930px;
+	height: 270px;
+	background: url(../../../Pictures/vampira-letra-1kilo-part-pablo-m.jpg);
+	margin: auto;
+	position: relative;
+	border-bottom: #F60 solid 5px;
+	border-top: #F60 solid 5px;
+	border-left: #F60 solid 5px;
+	border-right: #F60 solid 5px;
+}
+.menu {
+	width: 940px;
+	margin:auto;
+	height: 40px;
+	font-size: 18px;
+	
+}
+
+.menu ul li {
+	position: relative;
+	display: inline;
+	padding: 0 0 0 60px;
+	top: 10px;
+	
+}
+
+.menu ul li a {
+	text-decoration: none;
+	color: #F60;
+}
+
+.menu ul li a:hover {
+	text-decoration:  underline;
+	color: #F30;
+	
+}
+
+.menu ul li a.active {
+	color: aqua;
+	text-decoration: none;
+}

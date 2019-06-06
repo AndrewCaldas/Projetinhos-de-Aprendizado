@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+
+    <div>
+        <input type="text" id="campo-1">
+        <button type="button" id="btn-1" class="btn btn-primary">Clique-me</button>
+    </div>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function (){
+
+        // TECLADO
+        
+        // keypress
+        // keydown
+        // keyup
+
+        // $('#campo-1').keypress(function (){
+        //     alert("campo digitado!")
+        // })
+
+        // CLICK MOUSE EVENTS
+
+        // .focus
+        // .blur
+        // .change
+
+        $('#btn-1').focus(function () {
+            alert("focado!")
+        })
+
+    })
+</script>
+</html>
