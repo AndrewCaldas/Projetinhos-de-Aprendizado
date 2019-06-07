@@ -20,7 +20,7 @@
 						<td align="center">
 							<img src="imagens/jogador_1.png" />
 							<br />
-							<input type="text" maxlength="10" placeholder="Apelido jogador 1" style="border: 0px;" />
+							<input type="text" maxlength="10" id="jogador-1" placeholder="Apelido jogador 1" style="border: 0px;" />
 						</td>
 						<td align="center">
 							<img id="iniciar" src="imagens/iniciar.png" />
@@ -28,7 +28,7 @@
 						<td align="center">
 							<img src="imagens/jogador_2.png" />
 							<br />
-							<input type="text" maxlength="10" placeholder="Apelido jogador 2" style="border: 0px;" />
+							<input type="text" maxlength="10" id="jogador-2" placeholder="Apelido jogador 2" style="border: 0px;" />
 						</td>
 					</tr>
 				</table>
@@ -36,9 +36,11 @@
 
 		</div>
 
-		<div id="palco_jogo" style="margin-top:50px; text-align:center">
+		<div id="palco_jogo" style="display: none; margin-top:50px; text-align:center">
 			<div style="display:inline-block;">
 				<img src="imagens/jogador_1.png" />
+				<br>
+				<span id="nome-jogador-1"></span>
 			</div>
 
 			<div style="display:inline-block;">
@@ -81,6 +83,8 @@
 
 			<div style="display:inline-block;">
 				<img src="imagens/jogador_2.png" />
+				<br>
+				<span id="nome-jogador-2"></span>
 			</div>
 		</div>
 
