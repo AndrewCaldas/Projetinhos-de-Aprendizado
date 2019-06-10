@@ -1,7 +1,10 @@
-
+    var rodada = 1;
+    var matriz_jogo = Array(3);
 
     $(document).ready(function (){
         $('#iniciar').click(function (){
+
+            // alertas
 
             let jogador1 = $('#jogador-1').val();
             let jogador2 = $('#jogador-2').val(); 
@@ -15,7 +18,7 @@
                 alert("Nome do jogador 2 não inserido");
                 return false;
             }
-
+            // exibir apelidos
             $('#nome-jogador-1').html(jogador1)
             $('#nome-jogador-2').html(jogador2)
 
@@ -23,8 +26,22 @@
             $('#pagina_inicial').hide();
             $('#palco_jogo').show();
 
-            // alert($('#jogador-1').val());
-            // alert($('#jogador-2').val());
+            // jogando
+            $('.jogada').click(function (){
+                var id_campo = this.id;
+                jogada(id_campo)
+            })
+
+            function jogada(id){
+                var icone = '';
+                var ponto = 0;
+
+                if((rodada % 2) == 1){
+                    alert("É a vez do jogador 1")
+                } else{
+                    alert("É a vez do jogador 2")
+                }
+            }
         })
     })
 
