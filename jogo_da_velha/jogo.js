@@ -37,10 +37,13 @@
                 var ponto = 0;
 
                 if((rodada % 2) == 1){
-                    alert("É a vez do jogador 1")
+                    icone = 'url("imagens/marcacao_1.png")';
+                    ponto = -1;
                 } else{
-                    alert("É a vez do jogador 2")
+                    ponto = 1;
                 }
+
+                rodada ++;
             }
         })
     })
